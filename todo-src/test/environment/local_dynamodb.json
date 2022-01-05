@@ -1,28 +1,26 @@
 {
     "GetTodoFunction": {
-        "ENDPOINT_OVERRIDE": "http://172.17.83.252:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "todo-table-todo",
+        "REGION": "us-west-2"
     },
     "GetAllTodoFunction": {
-        "ENDPOINT_OVERRIDE": "http://172.17.83.252:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "todo-table-todo",
+        "REGION": "us-west-2"
     },
     "CompleteTodoFunction": {
-        "ENDPOINT_OVERRIDE": "http://172.17.83.252:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "todo-table-todo",
+        "REGION": "us-west-2"
     },
     "AddTodoFunction": {
-        "ENDPOINT_OVERRIDE": "http://172.17.83.252:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "todo-table-todo",
+        "REGION": "us-west-2"
     },
     "UpdateTodoFunction": {
-        "ENDPOINT_OVERRIDE": "http://172.17.83.252:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "todo-table-todo",
+        "REGION": "us-west-2"
     },
     "DeleteTodoFunction": {
-        "ENDPOINT_OVERRIDE": "http://172.17.83.252:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "todo-table-todo",
+        "REGION": "us-west-2"
     }
-
-    
 }

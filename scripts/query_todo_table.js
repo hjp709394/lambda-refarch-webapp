@@ -1,18 +1,17 @@
 const AWS = require("aws-sdk");
 const DDB = new AWS.DynamoDB({ apiVersion: "2012-10-08" });
 
-const TABLE_NAME = "TodoTable";
-const ENDPOINT_OVERRIDE = "http://172.17.83.252:8000";
+const TABLE_NAME = "todo-table-todo";
+//const ENDPOINT_OVERRIDE = "http://172.17.83.252:8000";
 const REGION = 'us-west-2';
 
 const options = { region: REGION };
 AWS.config.update({ region: REGION });
-
-options.endpoint = ENDPOINT_OVERRIDE;
+//options.endpoint = ENDPOINT_OVERRIDE;
 
 const docClient = new AWS.DynamoDB.DocumentClient(options);
 
-username = "bla"
+username = "fdd05b44-7789-439e-b8df-94dee536508a"
 
 let params = {
     TableName: TABLE_NAME,
