@@ -2,8 +2,13 @@
 // SPDX-License-Identifier: MIT-0
 
 // default imports
-const AWSXRay = require("aws-xray-sdk-core");
-const AWS = AWSXRay.captureAWS(require("aws-sdk"));
+let AWS;
+if (!process.env.AWS_SAM_LOCAL) {
+  const AWSXRay = require("aws-xray-sdk-core");
+  AWS = AWSXRay.captureAWS(require("aws-sdk"));
+} else {
+  AWS = require("aws-sdk");
+}
 const { metricScope, Unit } = require("aws-embedded-metrics");
 const DDB = new AWS.DynamoDB({ apiVersion: "2012-10-08" });
 
@@ -31,7 +36,7 @@ const response = (statusCode, body, additionalHeaders) => ({
 // Get cognito username from claims
 function getCognitoUsername(event) {
   let authHeader = event.requestContext.authorizer;
-  if (authHeader !== null) {
+  if (authHeader != null) {
     return authHeader.claims["cognito:username"];
   }
   return null;

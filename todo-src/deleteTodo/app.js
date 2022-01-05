@@ -39,7 +39,7 @@ function isValidRequest(event) {
 
 function getCognitoUsername(event) {
   let authHeader = event.requestContext.authorizer;
-  if (authHeader !== null) {
+  if (authHeader != null) {
     return authHeader.claims["cognito:username"];
   }
   return null;
